@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1522/XE
+
+file:
+  upload-dir: uploads

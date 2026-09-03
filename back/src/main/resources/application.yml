@@ -1,6 +1,9 @@
 spring:
+  profiles:
+    active: local
+
   datasource:
-    url: jdbc:oracle:thin:@localhost:1522/XE
+#    url: jdbc:oracle:thin:@localhost:1521/XE
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
     driver-class-name: oracle.jdbc.OracleDriver
@@ -43,9 +46,19 @@ jwt:
   header: Authorization
   prefix: Bearer
 
-file:
-  upload-dir: /home/ubuntu/app/back/build/libs/uploads
-  # upload-dir: uploads
+# 로컬
+#file:
+#  upload-dir: uploads
+
+# 배포
+#file:
+#  upload-dir: /home/ubuntu/app/back/build/libs/uploads
 
 #server:
 #  port: 8484
+
+# https://thejoa703lcy.duckdns.org
+# 프록시서버(nginx), 프록시가 전달해준 https 헤더정보 어떻게 처리할 것인지
+
+server:
+  forward-headers-strategy: native

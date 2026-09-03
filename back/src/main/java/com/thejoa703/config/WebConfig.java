@@ -16,6 +16,8 @@ public class WebConfig  implements WebMvcConfigurer{
 	// 이미지리소스
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		System.out.println("uploadDir = " + uploadDir);
+		
 		registry.addResourceHandler("/uploads/**")  //    /uploads 호출경로
 				.addResourceLocations("file:" + uploadDir + "/");  // 실제올리는경로
 	} 
