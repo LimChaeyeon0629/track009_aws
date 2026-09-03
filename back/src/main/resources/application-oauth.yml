@@ -43,8 +43,8 @@ spring:
 
 app:
   oauth2:
-    redirect-url: http://54.180.93.203/oauth2/callback
+    # redirect-url: http://54.180.93.203/oauth2/callback
     # redirect-url: http://localhost:3000/oauth2/callback
-    # redirect-url: http://thejoa703lcy.duckdns.org/oauth2/callback
+    redirect-url: http://thejoa703lcy.duckdns.org/oauth2/callback
 
  
