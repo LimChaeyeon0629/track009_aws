@@ -10,7 +10,7 @@ export default function PostList({ posts = [], handleEdit, handleDelete }) {
 
   return (
     <div>
-      {/* 게시판리스트 */}
+      {/* 게시판리스트 */} 
       <h3> 게시글 : {posts?.length || 0} </h3>
 
       {posts?.map((post, index) => (
