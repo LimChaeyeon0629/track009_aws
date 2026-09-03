@@ -56,6 +56,9 @@ public class OAuth2SuccessHandler implements AuthenticationSuccessHandler {
             case "naver":  userInfo = new UserInfoNaver(attrs); break;
             default: throw new IllegalArgumentException("지원하지 않는 Provider: " + registrationId);
         } 
+        
+        
+        
         // Step1) db조회 / 저장
         AppUser user = userService.findByEmailAndProvider(userInfo.getEmail(), userInfo.getProvider())
             .orElseGet(() -> userService.saveSocialUser(

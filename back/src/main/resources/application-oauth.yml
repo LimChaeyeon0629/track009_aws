@@ -34,7 +34,8 @@ spring:
             authorization-uri: https://kauth.kakao.com/oauth/authorize
             token-uri: https://kauth.kakao.com/oauth/token
             user-info-uri: https://kapi.kakao.com/v2/user/me
-            user-name-attribute: kakao_account
+#           user-name-attribute: kakao_account
+            user-name-attribute: id
           naver:
             authorization-uri: https://nid.naver.com/oauth2.0/authorize
             token-uri: https://nid.naver.com/oauth2.0/token
@@ -45,6 +46,6 @@ app:
   oauth2:
     # redirect-url: http://54.180.93.203/oauth2/callback
     # redirect-url: http://localhost:3000/oauth2/callback
-    redirect-url: http://thejoa703lcy.duckdns.org/oauth2/callback
+    redirect-url: https://thejoa703lcy.duckdns.org/oauth2/callback
 
  
